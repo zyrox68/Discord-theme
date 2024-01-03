@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Discord theme",
+    "version": "1.0",
+    "description": "black discord theme with horizontal navbar",
+    "permissions": ["activeTab"],
+    "browser_action": {
+      "default_icon": "favicon.ico",
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": [
+          "https://*.discord.com/app",
+          "https://*.discord.com/channels/*",
+          "https://*.discord.com/login"
+        ],
+        "css": ["content.css"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
